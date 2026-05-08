@@ -10,6 +10,10 @@ function TodoList(){
         }
         setTask("");
     }
+
+    function deleteTask(id){
+        
+    }
     return(
         <>
             <input type="text" placeholder="enter you task" value={task} onChange={(e)=>setTask(e.target.value)}/>
@@ -19,6 +23,7 @@ function TodoList(){
                 tasks.map((t,index)=>(
                     <div key={index}>
                         <h1>{t}</h1>
+                        <button onClick={deleteTask}>delete task</button>
                     </div>
                 ))
             }
